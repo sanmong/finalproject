@@ -38,12 +38,10 @@ class FavoriteRecipesActivity : AppCompatActivity() {
                 lifecycleScope.launch(Dispatchers.IO) {
                     val isFavorite = recipe.isFavorite
                     recipe.isFavorite = !isFavorite
-                    if (!isFavorite) {
-                        recipesDatabase.delete(recipe)
-                        showToastOnUiThread("Recipe removed from favorites")
-                    } else {
-                        recipesDatabase.insert(recipe)
+                    if (!isFavorite) { recipesDatabase.insert(recipe)
                         showToastOnUiThread("Recipe added to favorites")
+                    } else { recipesDatabase.delete(recipe)
+                        showToastOnUiThread("Recipe removed from favorites")
                     }
                     runOnUiThread {
                         recipesAdapter.notifyDataSetChanged()
