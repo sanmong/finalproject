@@ -9,7 +9,6 @@ import android.widget.*
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.skku.cs.finalproject.api.RecipesApiService
-import android.widget.CheckBox as CheckBox1
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,6 +1,7 @@
 package com.skku.cs.finalproject.response
 
 import com.google.gson.annotations.SerializedName
+import com.skku.cs.finalproject.data.Recipes
 
 class RecipesResponse {
     @SerializedName("id")

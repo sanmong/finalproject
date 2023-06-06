@@ -5,12 +5,12 @@ import com.skku.cs.finalproject.data.Recipes
 
 @Dao
 interface RecipesDao {
-    @Query("SELECT * FROM products")
+    @Query("SELECT * FROM recipes")
     fun getAll(): List<Recipes>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(product: Recipes)
+    fun insert(recipes: Recipes)
 
     @Delete
-    fun delete(product: Recipes)
+    fun delete(recipes: Recipes)
 }

@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "products")
+@Entity(tableName = "recipes")
 data class Recipes(
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null,
@@ -17,4 +17,7 @@ data class Recipes(
 
     @ColumnInfo(name = "image_url")
     var imageUrl: String,
+
+    @ColumnInfo(name = "is_favorite")
+    var isFavorite: Boolean = false
 )

@@ -2,19 +2,13 @@ package com.skku.cs.finalproject.response
 
 import com.google.gson.annotations.SerializedName
 
-class SearchRecipesResponse {
-    @SerializedName("recipes")
-    lateinit var recipes: List<RecipesResponse>
+data class SearchRecipesResponse(
+    @SerializedName("results") val recipes: List<RecipesResult>
+)
 
-    @SerializedName("totalRecipes")
-    var totalRecipes: Int = 0
-
-    @SerializedName("type")
-    lateinit var type: String
-
-    @SerializedName("offset")
-    var offset: Int = 0
-
-    @SerializedName("number")
-    var number: Int = 0
-}
+data class RecipesResult(
+    @SerializedName("id") val id: Int,
+    @SerializedName("title") val title: String,
+    @SerializedName("image") val image: String,
+    @SerializedName("missedIngredientCount") val missedIngredientCount: Int
+)

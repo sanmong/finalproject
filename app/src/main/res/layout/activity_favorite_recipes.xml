@@ -19,7 +19,7 @@
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
-            app:title="favorite_recipes_activity_title"
+            app:title="Favorite Recipes"
             app:titleTextColor="?attr/colorOnPrimary" />
 
     </com.google.android.material.appbar.AppBarLayout>
